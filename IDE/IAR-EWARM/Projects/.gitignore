@@ -1,0 +1,4 @@
+**/*.dep
+**/*.ewt
+**/settings
+**/ewarm
