@@ -26,7 +26,7 @@
 
 #include <wolfssl/wolfcrypt/settings.h>
 
-#ifdef WOLFSSL_TI_CURRTIME
+#if WOLFSSL_TI_CURRTIME
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdint.h>

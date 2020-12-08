@@ -61,9 +61,11 @@
             <path>ra/board/ra6m3_ek/board_leds.h</path>
             <path>ra/fsp/inc/api/bsp_api.h</path>
             <path>ra/fsp/inc/api/r_ioport_api.h</path>
+            <path>ra/fsp/inc/api/r_timer_api.h</path>
             <path>ra/fsp/inc/fsp_common_api.h</path>
             <path>ra/fsp/inc/fsp_features.h</path>
             <path>ra/fsp/inc/fsp_version.h</path>
+            <path>ra/fsp/inc/instances/r_gpt.h</path>
             <path>ra/fsp/inc/instances/r_ioport.h</path>
             <path>ra/fsp/src/bsp/cmsis/Device/RENESAS/Include/base_addresses.h</path>
             <path>ra/fsp/src/bsp/cmsis/Device/RENESAS/Include/renesas.h</path>
@@ -97,6 +99,7 @@
             <path>ra/fsp/src/bsp/mcu/ra6m3/bsp_elc.h</path>
             <path>ra/fsp/src/bsp/mcu/ra6m3/bsp_feature.h</path>
             <path>ra/fsp/src/bsp/mcu/ra6m3/bsp_mcu_info.h</path>
+            <path>ra/fsp/src/r_gpt/r_gpt.c</path>
             <path>ra/fsp/src/r_ioport/r_ioport.c</path>
         </group>
         <group name="Build Configuration">
@@ -105,6 +108,7 @@
             <path>ra_cfg/fsp_cfg/bsp/bsp_mcu_device_cfg.h</path>
             <path>ra_cfg/fsp_cfg/bsp/bsp_mcu_device_pn_cfg.h</path>
             <path>ra_cfg/fsp_cfg/bsp/bsp_mcu_family_cfg.h</path>
+            <path>ra_cfg/fsp_cfg/r_gpt_cfg.h</path>
             <path>ra_cfg/fsp_cfg/r_ioport_cfg.h</path>
         </group>
         <group name="Generated Data">
