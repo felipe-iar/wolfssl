@@ -291,8 +291,8 @@ FSP Configuration
       General: Name: g_timer0
       General: Channel: 0
       General: Mode: Periodic
-      General: Period: 1
-      General: Period Unit: Seconds
+      General: Period: 0x100000000
+      General: Period Unit: Raw Counts
       Output: Duty Cycle Percent (only applicable in PWM mode): 50
       Output: GTIOCA Output Enabled: False
       Output: GTIOCA Stop Level: Pin Level Low
