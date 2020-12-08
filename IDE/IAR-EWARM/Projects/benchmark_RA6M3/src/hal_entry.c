@@ -12,9 +12,14 @@ typedef struct func_args {
     int    return_code;
 } func_args;
 
+static unsigned long long Stack[256*4*16] @ ".noinit";
+
 func_args args = { 0 } ;
 
-extern double current_time(int reset) ;
+extern double current_time(int reset);
+
+/* QnD patch: to provide __iar_data_init3() */
+__root int __dummy(void) { __iar_data_init3(); return 1; }
 
 FSP_CPP_HEADER
 void R_BSP_WarmStart(bsp_warm_start_event_t event);
@@ -26,8 +31,9 @@ FSP_CPP_FOOTER
  **********************************************************************************************************************/
 void hal_entry(void)
 {
+  
     /* TODO: add your own code here */
-    benchmark_test(&args) ;
+    benchmark_test(&args);
 
 #if BSP_TZ_SECURE_BUILD
     /* Enter non-secure code */

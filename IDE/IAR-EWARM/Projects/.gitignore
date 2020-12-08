@@ -2,3 +2,4 @@
 **/*.ewt
 **/settings
 **/ewarm
+**/logs

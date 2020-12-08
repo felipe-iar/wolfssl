@@ -3,34 +3,14 @@
   <v1:deviceSetting id="renesas.ra6m3_fc" pattern="R7FA6M3A***FC">
     <v1:packageSetting id="renesas.176lqfp"/>
   </v1:deviceSetting>
-  <v1:configSetting configurationId="debug0.mode" altId="debug0.mode.jtag"/>
+  <v1:configSetting configurationId="debug0.mode" altId="debug0.mode.swd"/>
   <v1:configSetting configurationId="p300.gpio_mode" altId="p300.gpio_mode.gpio_mode_peripheral"/>
-  <v1:configSetting configurationId="p300" altId="p300.debug0.tck">
-    <v1:connectionSetting altId="debug0.tck.p300"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="debug0.tck" altId="debug0.tck.p300">
-    <v1:connectionSetting altId="p300.debug0.tck"/>
+  <v1:configSetting configurationId="p300" altId="p300.debug0.swclk">
+    <v1:connectionSetting altId="debug0.swclk.p300"/>
   </v1:configSetting>
   <v1:configSetting configurationId="p108.gpio_mode" altId="p108.gpio_mode.gpio_mode_peripheral"/>
-  <v1:configSetting configurationId="p108" altId="p108.debug0.tms">
-    <v1:connectionSetting altId="debug0.tms.p108"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="debug0.tms" altId="debug0.tms.p108">
-    <v1:connectionSetting altId="p108.debug0.tms"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="p109.gpio_mode" altId="p109.gpio_mode.gpio_mode_peripheral"/>
-  <v1:configSetting configurationId="p109" altId="p109.debug0.tdo">
-    <v1:connectionSetting altId="debug0.tdo.p109"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="debug0.tdo" altId="debug0.tdo.p109">
-    <v1:connectionSetting altId="p109.debug0.tdo"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="p110.gpio_mode" altId="p110.gpio_mode.gpio_mode_peripheral"/>
-  <v1:configSetting configurationId="p110" altId="p110.debug0.tdi">
-    <v1:connectionSetting altId="debug0.tdi.p110"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="debug0.tdi" altId="debug0.tdi.p110">
-    <v1:connectionSetting altId="p110.debug0.tdi"/>
+  <v1:configSetting configurationId="p108" altId="p108.debug0.swdio">
+    <v1:connectionSetting altId="debug0.swdio.p108"/>
   </v1:configSetting>
   <v1:configSetting configurationId="usbhs0.vss1usbhs" altId="usbhs0.vss1usbhs.vss1usbhs">
     <v1:connectionSetting altId="vss1usbhs.usbhs0.vss1usbhs"/>
@@ -692,4 +672,10 @@
   <v1:configSetting configurationId="gpt7.pairing" altId="gpt7.pairing.free"/>
   <v1:configSetting configurationId="gpt7.mode" altId="gpt7.mode.disabled"/>
   <v1:configSetting configurationId="p015.gpio_mode" altId="p015.gpio_mode.disabled"/>
+  <v1:configSetting configurationId="debug0.swdio" altId="debug0.swdio.p108">
+    <v1:connectionSetting altId="p108.debug0.swdio"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="debug0.swclk" altId="debug0.swclk.p300">
+    <v1:connectionSetting altId="p300.debug0.swclk"/>
+  </v1:configSetting>
 </v1:pinSettings>

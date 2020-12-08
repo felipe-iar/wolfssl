@@ -48,7 +48,7 @@
                 </option>
                 <option>
                     <name>RunToEnable</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>RunToName</name>
@@ -84,11 +84,11 @@
                 </option>
                 <option>
                     <name>OCDynDriverList</name>
-                    <state>JLINK_ID</state>
+                    <state>IJET_ID</state>
                 </option>
                 <option>
                     <name>OCLastSavedByProductVersion</name>
-                    <state>8.50.6.27238</state>
+                    <state>8.50.6.28950</state>
                 </option>
                 <option>
                     <name>UseFlashLoader</name>
@@ -512,7 +512,7 @@
                 <option>
                     <name>IjetResetList</name>
                     <version>1</version>
-                    <state>10</state>
+                    <state>4</state>
                 </option>
                 <option>
                     <name>IjetHWResetDuration</name>
@@ -577,7 +577,7 @@
                 </option>
                 <option>
                     <name>IjetCpuClockEdit</name>
-                    <state></state>
+                    <state>60.0</state>
                 </option>
                 <option>
                     <name>IjetSwoPrescalerList</name>
@@ -686,7 +686,7 @@
                 </option>
                 <option>
                     <name>IjetSelectedCPUBehaviour</name>
-                    <state>0</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>ICpuName</name>
@@ -698,12 +698,12 @@
                 </option>
                 <option>
                     <name>IjetPreferETB</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>IjetTraceSettingsList</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>IjetTraceSizeList</name>

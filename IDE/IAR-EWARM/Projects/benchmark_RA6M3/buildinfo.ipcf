@@ -121,6 +121,8 @@
             <path>ra_gen/vector_data.h</path>
         </group>
         <group name="Program Entry">
+            <path>src/benchmark-main.c</path>
+            <path>src/current_time.c</path>
             <path>src/hal_entry.c</path>
         </group>
     </files>
