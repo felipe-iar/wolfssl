@@ -20,3 +20,4 @@
                 define symbol OSPI_DEVICE_0_LENGTH   = 0x0;
                 define symbol OSPI_DEVICE_1_START = 0x70000000;
                 define symbol OSPI_DEVICE_1_LENGTH   = 0x0;
+                    define symbol RAM_NS_BUFFER_LENGTH = 0xC20;

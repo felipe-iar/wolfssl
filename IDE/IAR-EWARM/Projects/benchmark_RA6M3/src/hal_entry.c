@@ -1,47 +1,4 @@
 #include "hal_data.h"
-#ifdef HAVE_CONFIG_H
-    #include <config.h>
-#endif
-
-#include <wolfssl/wolfcrypt/settings.h>
-#include <wolfcrypt/benchmark/benchmark.h>
-
-typedef struct func_args {
-    int    argc;
-    char** argv;
-    int    return_code;
-} func_args;
-
-static unsigned long long Stack[256*4*16] @ ".noinit";
-
-func_args args = { 0 } ;
-
-extern double current_time(int reset);
-double current_time(int reset) 
-{
-    static timer_status_t status;
-    
-    if (reset)
-    {
-        g_timer0.p_api->reset(&g_timer0_ctrl);
-    }
-    
-    g_timer0.p_api->statusGet(&g_timer0_ctrl, &status);
-    
-    return (double)(status.counter / 60000000U) ;
-}
-
-uint32_t g_timer_overflow_flg = 0;
-void g_timer0_callback(timer_callback_args_t * p_args)
-{
-  if (NULL != p_args) 
-  {
-    g_timer_overflow_flg = 1;
-  }
-}
-  
-/* QnD patch: to provide __iar_data_init3() */
-__root int __dummy(void) { __iar_data_init3(); return 1; }
 
 FSP_CPP_HEADER
 void R_BSP_WarmStart(bsp_warm_start_event_t event);
@@ -53,21 +10,7 @@ FSP_CPP_FOOTER
  **********************************************************************************************************************/
 void hal_entry(void)
 {
-    fsp_err_t err = FSP_SUCCESS;
-    
-    err = g_timer0.p_api->open(&g_timer0_ctrl, &g_timer0_cfg);
-    if (FSP_SUCCESS != err)
-    {
-        while (1);
-    }
-    
-    err = g_timer0.p_api->start(&g_timer0_ctrl);
-    if (FSP_SUCCESS != err)
-    {
-        while (1);
-    }
-  
-    benchmark_test(&args);
+    /* TODO: add your own code here */
 
 #if BSP_TZ_SECURE_BUILD
     /* Enter non-secure code */

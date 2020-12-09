@@ -48,7 +48,7 @@
                 </option>
                 <option>
                     <name>RunToEnable</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>RunToName</name>
@@ -88,7 +88,7 @@
                 </option>
                 <option>
                     <name>OCLastSavedByProductVersion</name>
-                    <state>8.50.6.28950</state>
+                    <state>8.50.6.27238</state>
                 </option>
                 <option>
                     <name>UseFlashLoader</name>
@@ -686,7 +686,7 @@
                 </option>
                 <option>
                     <name>IjetSelectedCPUBehaviour</name>
-                    <state></state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>ICpuName</name>
@@ -698,12 +698,12 @@
                 </option>
                 <option>
                     <name>IjetPreferETB</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IjetTraceSettingsList</name>
                     <version>0</version>
-                    <state>2</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>IjetTraceSizeList</name>

@@ -6,10 +6,10 @@
         #define VECTOR_DATA_IRQ_COUNT    (1)
         #endif
         /* ISR prototypes */
-        void gpt_counter_overflow_isr(void);
+        void ether_eint_isr(void);
 
         /* Vector table allocations */
-        #define VECTOR_NUMBER_GPT0_COUNTER_OVERFLOW ((IRQn_Type) 0) /* GPT0 COUNTER OVERFLOW (Overflow) */
+        #define VECTOR_NUMBER_EDMAC0_EINT ((IRQn_Type) 0) /* EDMAC0 EINT (EDMAC 0 interrupt) */
         typedef enum IRQn {
             Reset_IRQn = -15,
             NonMaskableInt_IRQn = -14,
@@ -22,6 +22,6 @@
             DebugMonitor_IRQn = -4,
             PendSV_IRQn = -2,
             SysTick_IRQn = -1,
-            GPT0_COUNTER_OVERFLOW_IRQn = 0, /* GPT0 COUNTER OVERFLOW (Overflow) */
+            EDMAC0_EINT_IRQn = 0, /* EDMAC0 EINT (EDMAC 0 interrupt) */
         } IRQn_Type;
         #endif /* VECTOR_DATA_H */
