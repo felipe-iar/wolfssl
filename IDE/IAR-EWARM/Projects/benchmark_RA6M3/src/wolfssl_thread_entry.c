@@ -10,8 +10,7 @@ __root int __dummy(void) { __iar_data_init3(); return 1; }
                 void wolfssl_thread_entry(void * pvParameters)
                 {
                     FSP_PARAMETER_NOT_USED(pvParameters);
-
-                    benchmark_test(0);
+                    benchmark_test(NULL);
                     while(1)
                     {
                         vTaskDelay(1);

@@ -3,3 +3,5 @@
 **/settings
 **/ewarm
 **/logs
+**/Backup*
+**/*.custom_varargs
