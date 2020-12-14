@@ -21,7 +21,6 @@
 #ifndef USER_SETTINGS_H_
 #define USER_SETTINGS_H_
 
-#define WOLFSSL_BENCHMARK_TEST
 
 /* Temporary defines. Not suitable for production. */
 #define WOLFSSL_GENSEED_FORTEST /* Warning: define your own seed gen */
@@ -38,9 +37,8 @@
 #define NO_DEV_RANDOM
 #define NO_WRITEV
 #define NO_MAIN_DRIVER
-/*use kB instead of mB for embedded benchmarking*/
 #define BENCH_EMBEDDED
-#define USE_CERT_BUFFERS_1024
+#define SIZEOF_LONG_LONG 8
 
 /* Filesystem and IO */
 #define NO_WOLFSSL_DIR
@@ -49,11 +47,9 @@
 
 /* Cryptography Enable Options */
 #define HAVE_CHACHA
+#define HAVE_POLY1305
 #define HAVE_ECC
-#define HAVE_CURVE25519
-#define CURVE25519_SMALL
-//#define HAVE_RSA
-#define NO_RSA
+#define HAVE_RSA
 #define HAVE_SHA256
 #define HAVE_SUPPORTED_CURVES
 #define HAVE_TLS_EXTENSIONS
@@ -65,17 +61,14 @@
 #define HAVE_AESGCM
 #define HAVE_ONE_TIME_AUTH
 
-
 /* Non-Fast Math may call realloc. This project has no realloc support */
 #define USE_FAST_MATH
 #define ALT_ECC_SIZE
 #define TFM_TIMING_RESISTANT
 #define ECC_TIMING_RESISTANT
 #define WC_RSA_BLINDING
-#define WOLFSSL_SMALL_STACK
+//#define WOLFSSL_SMALL_STACK
 #define WOLFSSL_DH_CONST
-#define FP_MAX_BITS              2048
-#define FP_MAX_BITS_ECC          (256 * 2)
 
 /* Cryptography Disable options */
 #define NO_PWDBASED
@@ -88,11 +81,5 @@
 void wolfssl_thread_entry(void *pvParameters);
 extern void initialise_monitor_handles(void);
 int strncasecmp(const char *s1, const char * s2, unsigned int sz);
-
-/* Debugging */
-#if 0
-#define fprintf(file, format, ...)   printf(format, ##__VA_ARGS__)
-#define DEBUG_WOLFSSL
-#endif
 
 #endif /* USER_SETTINGS_H_ */

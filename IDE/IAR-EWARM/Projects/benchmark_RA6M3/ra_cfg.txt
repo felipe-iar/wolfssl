@@ -52,7 +52,7 @@ FSP Configuration
     ID Code (32 Hex Characters): FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
     
   RA Common
-    Main stack size (bytes): 0x400
+    Main stack size (bytes): 0x20000
     Heap size (bytes): 0
     MCU Vcc (mV): 3300
     Parameter checking: Disabled
@@ -115,9 +115,9 @@ FSP Configuration
       P105 127 - - - - Disabled - - "BUS0: D5_DQ5; GLCDC0: LCD_TCON3; GPT1: GTIOCA; IRQ0: IRQ00; KINT0: KRM5; POEG0: GTETRG; SCI8: SDA; SCI8: TXD_MOSI; SPI0: SSL2" 
       P106 126 - - - - Disabled - - "AGT0: AGTOB; BUS0: D6_DQ6; GLCDC0: LCD_DATA00; GPT8: GTIOCB; KINT0: KRM6; SCI8: SCK; SPI0: SSL3" 
       P107 125 - - - - Disabled - - "AGT0: AGTOA; BUS0: D7_DQ7; GLCDC0: LCD_DATA01; GPT8: GTIOCA; KINT0: KRM7; SCI8: CTS_RTS_SS" 
-      P108 89 DEBUG0_TMS - Low - "Peripheral mode" CMOS None "DEBUG0: SWDIO; DEBUG0: TMS; GPT0: GTIOCB; OPS0: GTOULO; SCI9: CTS_RTS_SS; SPI1: SSL0" 
-      P109 90 DEBUG0_TDO - Low - "Peripheral mode" CMOS None "CAN1: CTX; CGC0: CLKOUT; DEBUG0: SWO; DEBUG0: TDO; GPT1: GTIOCA; OPS0: GTOVUP; SCI9: SDA; SCI9: TXD_MOSI; SPI1: MOSI" 
-      P110 91 DEBUG0_TDI - Low None "Peripheral mode" CMOS None "CAN1: CRX; CMP0: VCOUT; DEBUG0: TDI; GPT1: GTIOCB; IRQ0: IRQ03; OPS0: GTOVLO; SCI2: CTS_RTS_SS; SCI9: RXD_MISO; SCI9: SCL; SPI1: MISO" 
+      P108 89 DEBUG0_SWDIO - Low - "Peripheral mode" CMOS None "DEBUG0: SWDIO; DEBUG0: TMS; GPT0: GTIOCB; OPS0: GTOULO; SCI9: CTS_RTS_SS; SPI1: SSL0" 
+      P109 90 DEBUG0_SWO - Low - "Peripheral mode" CMOS None "CAN1: CTX; CGC0: CLKOUT; DEBUG0: SWO; DEBUG0: TDO; GPT1: GTIOCA; OPS0: GTOVUP; SCI9: SDA; SCI9: TXD_MOSI; SPI1: MOSI" 
+      P110 91 - - - - Disabled - - "CAN1: CRX; CMP0: VCOUT; DEBUG0: TDI; GPT1: GTIOCB; IRQ0: IRQ03; OPS0: GTOVLO; SCI2: CTS_RTS_SS; SCI9: RXD_MISO; SCI9: SCL; SPI1: MISO" 
       P111 92 - - - - Disabled - - "BUS0: A05; GLCDC0: LCD_DATA12; GPT3: GTIOCA; IRQ0: IRQ04; SCI2: SCK; SCI9: SCK; SPI1: RSPCK" 
       P112 93 - - - - Disabled - - "BUS0: A04; GLCDC0: LCD_DATA11; GPT3: GTIOCB; SCI1: SCK; SCI2: SDA; SCI2: TXD_MOSI; SPI1: SSL0; SSI0: SSISCK" 
       P113 94 - - - - Disabled - - "BUS0: A03; GLCDC0: LCD_DATA10; GPT2: GTIOCA; SCI2: RXD_MISO; SCI2: SCL; SSI0: SSIWS" 
@@ -138,7 +138,7 @@ FSP Configuration
       P212 24 CGC0_EXTAL - Low None "Peripheral mode" CMOS None "AGT1: AGTEE; CGC0: EXTAL; GPT0: GTIOCB; IRQ0: IRQ03; POEG3: GTETRG; SCI1: RXD_MISO; SCI1: SCL" 
       P213 23 CGC0_XTAL - Low None "Peripheral mode" CMOS None "ADC1: ADTRG; CGC0: XTAL; GPT0: GTIOCA; IRQ0: IRQ02; POEG2: GTETRG; SCI1: SDA; SCI1: TXD_MOSI" 
       P214 62 TRACE0_TCLK - High - "Peripheral mode" CMOS None "ETHERC0: MDC; GLCDC0: LCD_DATA22; OPS0: GTIU; QSPI0: QSPCLK; SDHI0: CLK; TRACE0: TCLK" 
-      P300 88 DEBUG0_TCK - Low - "Peripheral mode" CMOS None "DEBUG0: SWCLK; DEBUG0: TCK; GPT0: GTIOCA; OPS0: GTOUUP; SPI1: SSL1" 
+      P300 88 DEBUG0_SWCLK - Low - "Peripheral mode" CMOS None "DEBUG0: SWCLK; DEBUG0: TCK; GPT0: GTIOCA; OPS0: GTOUUP; SPI1: SSL1" 
       P301 87 - - - - Disabled - - "AGT0: AGTIO; BUS0: A06; GLCDC0: LCD_DATA13; GPT4: GTIOCB; IRQ0: IRQ06; OPS0: GTOULO; SCI2: RXD_MISO; SCI2: SCL; SCI9: CTS_RTS_SS; SPI1: SSL2" 
       P302 86 - - - - Disabled - - "BUS0: A07; GLCDC0: LCD_DATA14; GPT4: GTIOCA; IRQ0: IRQ05; OPS0: GTOUUP; SCI2: SDA; SCI2: TXD_MOSI; SPI1: SSL3" 
       P303 85 - - - - Disabled - - "BUS0: A08; GLCDC0: LCD_DATA15; GPT7: GTIOCB" 
@@ -372,7 +372,7 @@ FSP Configuration
     General: Message Buffer Length Type: size_t
     Memory Allocation: Support Static Allocation: Enabled
     Memory Allocation: Support Dynamic Allocation: Enabled
-    Memory Allocation: Total Heap Size: 0x4000
+    Memory Allocation: Total Heap Size: 0x20000
     Memory Allocation: Application Allocated Heap: Disabled
     Stats: Generate Run Time Stats: Disabled
     Timers: Use Timers: Enabled
@@ -442,7 +442,7 @@ FSP Configuration
   Thread "New Thread"
     Symbol: wolfssl_thread
     Name: New Thread
-    Stack size (bytes): 8192
+    Stack size (bytes): 0x10000
     Priority: 1
     Thread Context: NULL
     Memory Allocation: Dynamic

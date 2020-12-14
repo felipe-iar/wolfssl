@@ -4,9 +4,9 @@
 #if 0
                 static StaticTask_t wolfssl_thread_memory;
                 #if defined(__ARMCC_VERSION)           /* AC6 compiler */
-                static uint8_t wolfssl_thread_stack[8192] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
+                static uint8_t wolfssl_thread_stack[0x10000] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
                 #else
-                static uint8_t wolfssl_thread_stack[8192] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.wolfssl_thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
+                static uint8_t wolfssl_thread_stack[0x10000] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.wolfssl_thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
                 #endif
                 #endif
                 TaskHandle_t wolfssl_thread;
@@ -36,7 +36,7 @@ extern uint32_t g_fsp_common_thread_count;
                     #endif
                         wolfssl_thread_func,
                         (const char *)"New Thread",
-                        8192/4, // In words, not bytes
+                        0x10000/4, // In words, not bytes
                         (void *) &wolfssl_thread_parameters, //pvParameters
                         1,
                         #if 0
